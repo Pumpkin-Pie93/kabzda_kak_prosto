@@ -4,6 +4,7 @@ import {UnControlledAccordion} from "./components/unControlledAccordion/UnContro
 import {UnControlledRating} from "./components/uncontroledraiting/UnControledRaiting";
 import {Rating, RatingValueType} from "./components/raiting/Raiting";
 import Accordion from "./components/accordion/Accordion";
+import {OnOff} from "./components/onOff/OnOff";
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
 
   return (
     <div className='App'>
-
+        <OnOff />
         <UnControlledAccordion title='Menu' />
         <UnControlledRating/>
         <UnControlledAccordion title='Settings' />
