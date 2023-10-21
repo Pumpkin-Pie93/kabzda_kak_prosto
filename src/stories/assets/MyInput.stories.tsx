@@ -83,3 +83,38 @@ export const UnControlledInputAndButton = () => {
         </div>
     )
 }
+
+export const ControlledInput = () => {
+    const [value, setValue] = useState('')
+
+    const onchangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+       const currentValue = e.currentTarget.value
+       setValue(currentValue)
+    }
+    return <input value={value} onChange={onchangeHandler}/>
+}
+
+export const ControlledCheckBox = () => {
+    const [value, setValue] = useState(false)
+
+    const onchangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+       const currentValue = e.currentTarget.checked
+       setValue(currentValue)
+    }
+    return <input type={"checkbox"} checked={value} onChange={onchangeHandler}/>
+}
+
+export const ControlledSelector = () => {
+    const [value, setValue] = useState< string |undefined >(undefined)
+
+    const onchangeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
+       const currentValue = e.currentTarget.value
+       setValue(currentValue)
+    }
+    return <select value={value} onChange={onchangeHandler}>
+        <option>None</option>
+        <option value={'1'}>Minsk</option>
+        <option value={'2'}>LA</option>
+        <option value={'3'}>London</option>
+    </select>
+}
