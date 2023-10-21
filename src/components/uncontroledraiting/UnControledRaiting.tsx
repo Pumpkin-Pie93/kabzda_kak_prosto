@@ -3,9 +3,6 @@ import {Star} from "../star/Star";
 
 export function UnControlledRating() {
 
-
-
-
     const UnControlledRatingStyle = {
         margin: '10px',
         color: 'red',

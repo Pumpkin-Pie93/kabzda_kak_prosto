@@ -1,4 +1,4 @@
-import {Rating, RatingValueType, Star} from "./Raiting";
+import {Rating, RatingValueType} from "./Raiting";
 import React, {useState} from "react";
 
 

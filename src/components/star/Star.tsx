@@ -1,7 +1,7 @@
 import React from "react";
 
 
-type StarPropsType = {
+export type StarPropsType = {
     selected: boolean
     setValue: (value: 1 | 2 | 3 | 4 | 5) => void
     value: 1 | 2 | 3 | 4 | 5
