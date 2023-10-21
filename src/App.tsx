@@ -9,7 +9,7 @@ import {OnOff} from "./components/onOff/OnOff";
 function App() {
 
     let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
-    let [accordionCollapsed, setAccordionCollapsed] = useState(false)
+    let [accordionCollapsed, setAccordionCollapsed] = useState(true)
 
   return (
     <div className='App'>
