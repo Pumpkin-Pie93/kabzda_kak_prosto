@@ -19,7 +19,7 @@ function App() {
         <UnControlledAccordion title='Settings' />
         <UnControlledRating/>
         <Rating value={ratingValue} onClick={setRatingValue}/>
-        <Accordion title={'Message'} collapsed={accordionCollapsed} onClick={setAccordionCollapsed}/>
+        <Accordion title={'Message'} collapsed={accordionCollapsed} onClick={setAccordionCollapsed} items={[{title: 'Polina',value: 1},{title: 'Kiryll', value: 2}]}/>
     </div>
   );
 }
