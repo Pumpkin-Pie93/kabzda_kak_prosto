@@ -1,5 +1,5 @@
 import {Rating, RatingValueType} from "./Raiting";
-import React, {useState} from "react";
+import React, {ChangeEvent, useState} from "react";
 
 
 export default {

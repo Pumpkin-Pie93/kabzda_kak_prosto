@@ -8,7 +8,7 @@
     color: deeppink;
 
 }
-#selectorId {
+.selectorId {
   :hover {
    border-bottom: 2px solid deepPink
 

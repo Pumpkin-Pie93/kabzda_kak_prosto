@@ -13,6 +13,12 @@ function App() {
     let [accordionCollapsed, setAccordionCollapsed] = useState(true)
     let [select, setSelect] = useState<string | undefined>(undefined)
 
+    let nameItems = [
+        {name: 'Polina', value: 1},
+        {name: 'Kiryll', value: 2},
+        {name: 'Chili', value: 3}
+    ]
+
     return (
         <div className='App'>
             <OnOff/>
@@ -31,10 +37,7 @@ function App() {
                        items={[{title: 'Polina', value: 1}, {title: 'Kiryll', value: 2}]}/>
             <Select value={select}
                     onChange={setSelect}
-                    items={[{title: 'Minsk', value: '1'}, {title: 'Grodno', value: '2'}, {
-                        title: 'Brest',
-                        value: '3'
-                    }]}/>
+                    items={nameItems}/>
         </div>
     );
 }

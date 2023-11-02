@@ -9,7 +9,7 @@ export default {
 
 export const SelectStory = () => {
     return (
-        <Select value={'Select'} onChange={l=>l} items={[{title: 'Polina', value: 1}, {title: 'Kiryll', value: 2}]}/>
+        <Select value={'Select'} onChange={l=>l} items={[{name: 'Polina', value: 1}, {name: 'Kiryll', value: 2},{name: 'Chili', value: 3}]}/>
     )
 
 }
