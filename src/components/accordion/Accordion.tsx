@@ -4,7 +4,6 @@ type ItemsType = {
     title: string
     value: any
 }
-
 type AccordionPropsType = {
     title: string
     collapsed: boolean
@@ -15,8 +14,8 @@ type AccordionPropsType = {
 
 function Accordion(props: AccordionPropsType) {
     return <div>
-        <AccordionTitle title={props.title} onClick={props.onChange} collapsed={props.collapsed}/>
-        {!props.collapsed && <AccordionBody onClick={props.onClick} items={props.items}/>}
+        <AccordionTitleMemo title={props.title} onClick={props.onChange} collapsed={props.collapsed}/>
+        {!props.collapsed && <AccordionBodyMemo onClick={props.onClick} items={props.items}/>}
     </div>
 }
 
@@ -31,6 +30,8 @@ function AccordionTitle(props: AccordionTitlePropsType) {
         <h3 onClick={(e) => props.onClick(!props.collapsed)}>{props.title}</h3>
     )
 }
+
+const AccordionTitleMemo = React.memo(AccordionTitle)
 
 type AccordionBodyPropsType = {
     items: ItemsType[]
@@ -48,5 +49,7 @@ function AccordionBody(props: AccordionBodyPropsType) {
         </ul>
     )
 }
+const AccordionBodyMemo = React.memo(AccordionBody)
+
 
 export default Accordion;

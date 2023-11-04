@@ -14,19 +14,21 @@ export function UnControlledAccordion (props:UnControlledAccordionType) {
 
     return (
         <div>
-            <UnControlledAccordionTitle title={props.title}
+            <UnControlledAccordionTitleMemo title={props.title}
                                         onClick={() => {setCollapsed(!collapsed)}}/>
-            {!collapsed && <AccordionBody/>}
+            {!collapsed && <UnControlledAccordionBodyMemo/>}
         </div>
     )
 }
 
-
+const UnControlledAccordionTitleMemo = React.memo(UnControlledAccordionTitle)
 function UnControlledAccordionTitle (props: UnControlledAccordionTitle) {
     return (
       <h3 onClick={()=> {props.onClick()}}>---{props.title}---</h3>
     )
 }
+const UnControlledAccordionBodyMemo = React.memo(AccordionBody)
+
 function AccordionBody () {
     return (
        <ul>

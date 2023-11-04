@@ -19,23 +19,30 @@ function App() {
         {name: 'Chili', value: 3}
     ]
 
+    const OnOffMemo = React.memo(OnOff)
+    const UnControlledAccordionMemo = React.memo(UnControlledAccordion)
+    const UnControlledRatingMemo = React.memo(UnControlledRating)
+    const RatingMemo = React.memo(Rating)
+    const AccordionMemo = React.memo(Accordion)
+    const SelectMemo = React.memo(Select)
+
     return (
         <div className='App'>
-            <OnOff/>
-            <UnControlledAccordion title='Menu'/>
-            <UnControlledRating/>
-            <UnControlledAccordion title='Settings'/>
-            <UnControlledRating/>
-            <Rating
+            <OnOffMemo/>
+            <UnControlledAccordionMemo title='Menu'/>
+            <UnControlledRatingMemo/>
+            <UnControlledAccordionMemo title='Settings'/>
+            <UnControlledRatingMemo/>
+            <RatingMemo
                 value={ratingValue}
                 onClick={setRatingValue}/>
-            <Accordion title={'Message'}
+            <AccordionMemo title={'Message'}
                        collapsed={accordionCollapsed}
                        onChange={setAccordionCollapsed}
                        onClick={(value) => {
                        }}
                        items={[{title: 'Polina', value: 1}, {title: 'Kiryll', value: 2}]}/>
-            <Select value={select}
+            <SelectMemo value={select}
                     onChange={setSelect}
                     items={nameItems}/>
         </div>

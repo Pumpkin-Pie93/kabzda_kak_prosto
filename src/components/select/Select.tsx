@@ -27,35 +27,7 @@ export const Select = (props: SelectPropsType) => {
         setSelect(false)
     }
 
-    // const stylesForSelect = {
-    //     borderBottom: '2px solid deepPink',
-    //     width: '60px',
-    //     height: '20px',
-    //     padding: '2px',
-    //     margin: '3px',
-    //     alignItems: 'center',
-    //     display: 'flex',
-    //     justifyContent: 'center',
-    //     backgroundColor: '#ffffff',
-    // }
-    //
-    // const stylesForSelecor = {
-    //     // borderBottom: '2px solid deepPink',
-    //     width: '60px',
-    //     height: '20px',
-    //     padding: '2px',
-    //     margin: '3px',
-    //     alignItems: 'center',
-    //     display: 'flex',
-    //     justifyContent: 'center',
-    //     backgroundColor: '#e0dfdf',
-    //     ':hover': {
-    //         borderBottom: '2px solid deepPink',
-    //     },
-    // }
-
-
-    return (
+       return (
         <div>
             <select>
                 <option>1</option>
