@@ -1,5 +1,6 @@
 import React, {useState, KeyboardEvent} from 'react';
 import s from './Select.module.css'
+import {selectOptions} from "@testing-library/user-event/dist/select-options";
 
 type ItemsType = {
     name: string
@@ -13,6 +14,21 @@ type SelectPropsType = {
 }
 
 export const Select = (props: SelectPropsType) => {
+    const cityItems = [
+        {name: 'Minsk', population: 2000000},
+        {name: 'Moskow', population: 12000000},
+        {name: 'Istambul', population: 15000000},
+        {name: 'Guanjou', population: 14000000},
+        {name: 'Tokyo', population: 14500000},
+        {name: 'New-York', population: 11000000},
+        {name: 'Seoul', population: 10000000},
+        {name: 'Deli', population: 9000000},
+        {name: 'London', population: 8.900000},
+        {name: 'Los-Angeles', population: 4000000},
+        {name: 'Osaka', population: 2.600000},
+        {name: 'Paris', population: 2.200000},
+    ]
+
 
     const [value, setValue] = useState<string>('Select')
     const [select, setSelect] = useState(false)
@@ -29,7 +45,7 @@ export const Select = (props: SelectPropsType) => {
 
        return (
         <div>
-            <select>
+            <select >
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>

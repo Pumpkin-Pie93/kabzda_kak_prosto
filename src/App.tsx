@@ -18,6 +18,21 @@ function App() {
         {name: 'Kiryll', value: 2},
         {name: 'Chili', value: 3}
     ]
+    const cityItems = [
+        {name: 'Minsk', population: 2000000},
+        {name: 'Moskow', population: 12000000},
+        {name: 'Istambul', population: 15000000},
+        {name: 'Guanjou', population: 14000000},
+        {name: 'Tokyo', population: 14500000},
+        {name: 'New-York', population: 11000000},
+        {name: 'Seoul', population: 10000000},
+        {name: 'Deli', population: 9000000},
+        {name: 'London', population: 8.900000},
+        {name: 'Los-Angeles', population: 4000000},
+        {name: 'Osaka', population: 2.600000},
+        {name: 'Paris', population: 2.200000},
+    ]
+
 
     const OnOffMemo = React.memo(OnOff)
     const UnControlledAccordionMemo = React.memo(UnControlledAccordion)
@@ -45,6 +60,7 @@ function App() {
             <SelectMemo value={select}
                     onChange={setSelect}
                     items={nameItems}/>
+
         </div>
     );
 }
