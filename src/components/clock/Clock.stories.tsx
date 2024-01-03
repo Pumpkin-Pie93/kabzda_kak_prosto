@@ -7,5 +7,5 @@ export default {
 }
 
 export const BaseExs = () => {
-    return <Clock/>
+    return <Clock />
 }

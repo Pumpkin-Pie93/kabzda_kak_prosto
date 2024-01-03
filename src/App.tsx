@@ -6,6 +6,7 @@ import {Rating, RatingValueType} from "./components/raiting/Raiting";
 import Accordion from "./components/accordion/Accordion";
 import {OnOff} from "./components/onOff/OnOff";
 import {Select} from "./components/select/Select";
+import {AnalogClock} from "./components/clock/analogClock";
 
 function App() {
 
@@ -60,6 +61,7 @@ function App() {
             <SelectMemo value={select}
                     onChange={setSelect}
                     items={nameItems}/>
+            <AnalogClock/>
 
         </div>
     );
